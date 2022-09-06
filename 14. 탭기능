@@ -1,1 +1,45 @@
+## 1. 스크래치 기능
+
+<img src="">
+
+* ### 1.1 XHTML 설정
+    ```html
+    <div class="cont-tab-wrap str1">
+        <div class="cont-tab-btn active" data-num="1">알코올 온도계</div>
+        <div class="cont-tab-btn" data-num="2">탐침 온도계</div>
+        
+        <div class="tab-frame" data-num="1">
+            <!-- 1번탭 -->
+        </div>
+        <div class="tab-frame" data-num="2" style="visibility: hidden; opacity: 0">
+            <!-- 2번탭 -->
+        </div>
+    </div>
+    ```
+    
+* ### 1.2 js 설정
+    ```javascript
+    var myTab1 = [];
+    $('.cont-tab-wrap').each(function(idx){
+        myTab1[idx] = new tabContent($(this));
+    });
+    ```
+
+* ### 1.3 CSS 설정
+    ```css
+    .cont-tab-wrap{position: absolute; top: 230px; left: 60px; width: 645px; height: 300px;}
+    .cont-tab-wrap .cont-tab-btn{
+        position: absolute; top: 0px; left: 0px; width: 280px; height: 35px; color: #fff; display: flex; justify-content: center; align-items: center; background-color: #ddd;
+        border-radius: 10px 10px 0px 0px; cursor: pointer;
+    }
+    .cont-tab-wrap .cont-tab-btn.active{background-color: #21409a;}
+    .cont-tab-wrap .cont-tab-btn[data-num="1"]{left: 40px;}
+    .cont-tab-wrap .cont-tab-btn[data-num="2"]{left: 325px;}
+    /*tab-frame 테두리 padding, 라운드, 파란색으로 수정 추가*/
+    .cont-tab-wrap .tab-frame{position: absolute; top: 34px; width: 100%; height: 300px; padding-top: 15px; border: 3px solid #21409a; border-radius: 30px;}
+    ```
+***
+
+
+
 
