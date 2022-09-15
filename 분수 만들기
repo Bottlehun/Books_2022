@@ -1,0 +1,21 @@
+분수만들기
+
+>> html
+<div>
+    <div class="math-tx batang-cont a">속력 = <span class="lot">--------------------<span class="up">이동한 거리</span><span class="dn">걸린시간</span></span></div>
+    <div class="math-tx batang-cont b">사람의 속력 = <span class="lot">-----------<span class="up">8 km</span><span class="dn">2 h</span></span> = 4 km/h</div>
+    <div class="math-tx batang-cont c">바람의 속력 = <span class="lot">-----------<span class="up">12 m</span><span class="dn">4 s</span></span> = 3 m/s</div>
+</div>
+
+
+>> css
+/*분수처리*/
+.math-tx.a{position: absolute; top: 581px; left: 280px;}
+.math-tx.b{position: absolute; top: 682px; left: 257px;}
+.math-tx.c{position: absolute; top: 828px; left: 265px;}
+
+.math-tx .lot{position: relative; letter-spacing: -2.5px;}
+.math-tx .lot .up{position: absolute; top: -12px; left: -3px; width: 100%; text-align: center; letter-spacing: 0px;}
+.math-tx .lot .dn{position: absolute; top: 13px; left: -3px; width: 100%; text-align: center; letter-spacing: 0px;}
+
+
